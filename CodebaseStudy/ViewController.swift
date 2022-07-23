@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let label = UILabel()
+        view.addSubview(label)
+        view.backgroundColor = .white
+        label.text = "Hello, world!"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
-
-
 }
 
